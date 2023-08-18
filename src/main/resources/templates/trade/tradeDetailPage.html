@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<!--트레이드 상세 페이지-->
+    <meta charset="UTF-8">
+    <title>교환해요 상세</title>
+    <!-- 공통 css -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link rel="stylesheet" href="../../../static/css/inc/reset.css">
+    <link rel="stylesheet" href="../../../static/css/font/font.css">
+    <!-- 공통 js -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <!-- 페이지 css-->
+    <link rel="stylesheet" href="../../static/css/trade/tradeDetailPage.css">
+    <!-- 페이지 js -->
+    <script src="../../static/js/trade/tradeDetailPage.js" defer></script>
+
+<body>
+
+<div id="app" class="content">
+    <div class="mainWrapper">
+        <div class="mainContents">
+            <div class="autoSet" style="opacity: 1; display: block">
+                <div class="positionR">
+                    <div class="displayF">
+                        <!--    게시글 내용 보이는 공간-->
+                        <div class="webkit">
+                            <!-- 이미지 섬네일 보이는 곳-->
+                            <div class="profile">
+                                <div class="slick-slider visibility slick-initialized">
+                                    <!--  이전 썸네일로 이동-->
+                                    <img
+                                            class="pre slick-arrow slick-prev"
+                                            onclick="prevSlide()"
+                                            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 50 50'%3E %3Cpath fill='none' fill-rule='evenodd' stroke='%23FFF' stroke-width='2' d='M21 17l8 8.014L21.028 33'/%3E %3C/svg%3E"
+                                            style="display: block;">
+                                    <div class="slick-list">
+                                        <div class="slick-track">
+                                            <!-- 썸내일 리스트-->
+                                            <div class="slick-slide  active">
+                                                <div class="autoSet" style="opacity: 1; display: block">
+                                                    <div class="Ratio" style="display: block">
+                                                        <div class="Ratio-ratio">
+                                                            <div class="Ratio-content">
+                                                                <img
+                                                                        alt="상품 이미지"
+                                                                        class="imgs"
+                                                                        src="../../static/img/trade/tradeImg/교환물건(5).jpg"/>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="slick-slide">
+                                                <div class="autoSet" style="opacity: 1; display: block">
+                                                    <div class="Ratio" style="display: block">
+                                                        <div class="Ratio-ratio">
+                                                            <div class="Ratio-content">
+                                                                <img
+                                                                        alt="상품 이미지"
+                                                                        class="imgs"
+                                                                        src="../../static/img/trade/tradeImg/교환물건(7).jpg"
+                                                                />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--  썸내일 리스트-->
+                                        </div>
+                                    </div>
+                                    <!--  다음 썸네일로 이동-->
+                                    <img
+                                            class="next slick-arrow slick-next"
+                                            onclick="nextSlide()"
+                                            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 50 50'%3E %3Cpath fill='none' fill-rule='evenodd' stroke='%23FFF' stroke-width='2' d='M21 17l8 8.014L21.028 33'/%3E %3C/svg%3E"
+                                    >
+                                </div>
+                                <div class="imgPage">
+                                    <!-- 불러와질 썸내일 수에 따라 숫자 변경-->
+                                    <span class="imgPageNum">0 / 2</span>
+                                </div>
+                            </div>
+                            <!--  게시글 내용 보이는 곳-->
+                            <div class="contents">
+                                <section class="name setHeight">
+                                    <div class="set">
+                                        <div class="setWebkit">
+                                            <hgroup class="titleWrapper">
+                                                <h1 class="title">
+                                                    일본에서 만든 양모펠트인형
+                                                </h1>
+                                            </hgroup>
+                                        </div>
+                                    </div>
+                                    <div class="titleContentsWrapper">
+                                        <div class="titleContent">일본에서의 추억이 담겨져있습니다. 세가지 중 원하시는거로 교환 신청합니다</div>
+                                    </div>
+                                </section>
+                                <!--  작성자 이름 표시하는 곳, 팔로우 버튼으로 바꿀예정-->
+                                <section class="name border">
+                                    <div class="colum">
+                                        <div class="nameSpace">
+                                            <div class="nameSpace2">
+                                                <div class="proImg">
+                                                    <a href="/hosts/4009">
+                                                        <div>
+                                                            <img
+                                                                    class="important"
+                                                                    width="56"
+                                                                    height="56"
+                                                                    src="https://res.cloudinary.com/frientrip/image/upload/ar_1:1,c_fill,dpr_2,f_auto,q_auto,w_56/%EC%88%8F%EC%BB%B7_%ED%94%84%EB%A6%BD%EB%B2%84%EC%8A%A4_82acd84db269acccb05e3c37a00b1a2f0da6a66970f9ef1055edfa0dcd6dcf3e"
+                                                            />
+                                                            <div class="autoSet" style="opacity: 1; display: block">
+                                                                <div class="Ratio" style="display: block">
+                                                                    <div class="Ratio-ratio">
+                                                                        <div class="Ratio-content">
+                                                                            <img
+                                                                                    alt="호스트 프로필 이미지"
+                                                                                    class="imgSet"
+                                                                                    width="56"
+                                                                                    height="56"
+                                                                                    src="https://res.cloudinary.com/frientrip/image/upload/ar_1:1,c_fill,dpr_2,f_auto,q_auto,w_56/%EC%88%8F%EC%BB%B7_%ED%94%84%EB%A6%BD%EB%B2%84%EC%8A%A4_82acd84db269acccb05e3c37a00b1a2f0da6a66970f9ef1055edfa0dcd6dcf3e"
+                                                                            />
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="nameTitle">
+                                                    <div class="nameTitle2">
+                                                        <a href="/hosts/4009"
+                                                        ><span class="nt"
+                                                        ><span>인형수집예술가</span
+                                                        ><img
+                                                                src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' viewBox='0 0 16 16'%3E %3Cpath stroke='%23333' stroke-linecap='round' stroke-width='1.5' d='M6 3l5 5-5 5'/%3E %3C/svg%3E"
+                                                                alt="arrow-right"/></span
+                                                        ></a>
+                                                    </div>
+                                                    <span class="follow"> <span>팔로우 10</span> | <span>팔로잉 1675</span
+                                                    > </span>
+                                                </div>
+                                            </div>
+                                            <button class="heart" onclick="heart()">팔로우</button>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                        <!--    지도 api 구간, 지움-->
+
+                    </div>
+
+                    <!--    화면 고정 되있던 참여하기 버튼 구간-->
+                    <div class="insertButtonWrapper">
+                        <div class="buttonWrapper">
+                            <button class="insertButton" type="button" onclick="likeOn()">
+                                <p class="xi-heart-o"/>
+                                <!--   좋아요 수 표기-->
+                                <span class="heart2">162</span>
+                            </button>
+                            <button class="buttonSet1 buttonSet2 buttonSet3">
+                                <div class="clickButton">교환하기</div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="commentsWrapper">
+            <div class="autoSet" style="opacity: 1; display: block">
+                <header class="commentsTitle">
+                    <div class="commentsTitle2">
+                        <div class="fontSet">댓글</div>
+                    </div>
+                </header>
+
+                <!--    댓글 입력 값 전송용 form 태그-->
+                <form class="commentForm">
+                    <div class="positionF">
+                        <input class="puter" value=""></div>
+                    <button type="submit" class="submitBu">전송</button>
+                </form>
+
+                <div class="padding0">
+                    <div class="paddBorder">
+                        <div class="commenterWrapper">
+                            <div class="commenterImg">
+                                <div class="autoSet" style="opacity: 1; display: block">
+                                    <div class="Ratio" style="display: block">
+                                        <div class="Ratio-ratio">
+                                            <div class="Ratio-content">
+                                                <img
+                                                        src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E %3Cg fill='none' fill-rule='nonzero'%3E %3Ccircle cx='24' cy='24' r='24' fill='%23C2E0FF'/%3E %3Cpath fill='%23FFF' d='M19 24.5h10a4 4 0 0 1 4 4v4H15v-4a4 4 0 0 1 4-4zm5-1.5a4.5 4.5 0 1 1 0-9 4.5 4.5 0 0 1 0 9z'/%3E %3C/g%3E %3C/svg%3E"
+                                                        alt="프로필"
+                                                        class="width100"
+                                                />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="commenterName">
+                                <div class="commenterName2">동그란무좀양말</div>
+                                <div class="whenComment">
+                                    <div class="when">2023년 7월 23일 14:41 작성</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="comment">
+                            정말 멋진 작품이네요~ 탐나네요~
+                        </div>
+                      <!--  <div class="thumbnail">
+                            &lt;!&ndash; 댓글에 이미지 공간, 이미지 갯수만큼 반복으로 출력하면 될듯 하다&ndash;&gt;
+                            <div>
+                                <img
+                                        class="important"
+                                        width="100"
+                                        src="https://res.cloudinary.com/frientrip/image/upload/ar_1:1,c_fill,dpr_2,f_auto,q_auto,w_600/ios_image_1334875_20230723144142495_d0d1d39b22dac37ac3250614a97e80eb164a6c58969943f791f7103da6f559ce"
+                                />
+                                <div class="autoSet" style="opacity: 1; display: block">
+                                    <div class="Ratio" style="display: block">
+                                        <div class="Ratio-ratio">
+                                            <div class="Ratio-content">
+                                                <img
+                                                        alt="후기 이미지"
+                                                        class="imgSet"
+                                                        width="100"
+                                                        src="../../../static/img/trade/tradeImg/교환물건(6).jpg"
+                                                />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>-->
+                        <!--    대댓글 공간-->
+                        <div class="bigCommenterWrapper">
+                            <div class="bigCommenterWrapper2">
+                                <div class="bigCommenterImg">
+                                    <div class="CommenterImg">
+                                        <div>
+                                            <img
+                                                    class="important"
+                                                    width="36"
+                                                    src="https://res.cloudinary.com/frientrip/image/upload/ar_1:1,c_fill,dpr_2,f_auto,q_auto,w_36/0584F060-26A9-4F7F-B807-1D90FA56677D_1521682589528"
+                                            />
+                                            <div class="autoSet" style="opacity: 1; display: block">
+                                                <div class="Ratio" style="display: block">
+                                                    <div class="Ratio-ratio">
+                                                        <div class="Ratio-content">
+                                                            <img
+                                                                    alt="작성자 프로필"
+                                                                    class="imgSet"
+                                                                    width="36"
+                                                                    src="https://res.cloudinary.com/frientrip/image/upload/ar_1:1,c_fill,dpr_2,f_auto,q_auto,w_36/0584F060-26A9-4F7F-B807-1D90FA56677D_1521682589528"
+                                                            />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="CommenterName">티팟테팔</div>
+                                        <div class="commenterWhen">2023-07-25 00:03 작성</div>
+                                    </div>
+                                </div>
+                                <div>
+                                    ㅎㅎ
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
