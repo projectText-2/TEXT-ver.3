@@ -28,7 +28,7 @@ public class RegisterController {
     @PostMapping("registerNext")
     public RedirectView join(MemberVO memberVO){
 //        null값이 들어가면 오류나서 빈 값을 던지게 만듦
-        memberVO.setIMG("");
+        memberVO.setImg("");
         registerService.join(memberVO);
         return new RedirectView("/register/registerOk");
     }

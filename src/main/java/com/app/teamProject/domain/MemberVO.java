@@ -8,10 +8,11 @@ import org.springframework.stereotype.Component;
 @Data
 @NoArgsConstructor
 public class MemberVO {
-    private String ID;
-    private String PW;
-    private String NAME;
-    private String HP;
-    private String IMG;
-    private String SORT;
+    private Long id;
+    private String pw;
+    private String name;
+    private String hp;
+    private String img;
+    private String sort; /*(회원구분:일반n, 관리자m, 공식o, 제제b, dm차단d, 비공개p, 탈퇴e) */
+
 }
