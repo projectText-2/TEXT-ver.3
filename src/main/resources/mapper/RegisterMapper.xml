@@ -3,11 +3,11 @@
 <mapper namespace="com.app.teamProject.mapper.RegisterMapper">
     <insert id="insert">
         INSERT INTO TBL_MEMBER
-        VALUES(#{ID}, #{PW}, #{NAME}, #{HP}, #{IMG}, #{SORT})
+        VALUES(#{Id}, #{Pw}, #{Name}, #{Hp}, #{Img}, #{Sort})
     </insert>
 
     <select id="selectForIdCheck" resultType="string">
         SELECT ID FROM TBL_MEMBER
-        WHERE ID = #{ID}
+        WHERE ID = #{Id}
     </select>
 </mapper>

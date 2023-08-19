@@ -3,6 +3,6 @@
 <mapper namespace="com.app.teamProject.mapper.LoginMapper">
     <select id="select" resultType="string">
         SELECT ID FROM TBL_MEMBER
-        WHERE ID = #{ID} AND PW = #{PW}
+        WHERE ID = #{Id} AND PW = #{Pw}
     </select>
 </mapper>
