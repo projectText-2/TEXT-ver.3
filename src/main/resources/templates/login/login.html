@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>로그인 기본화면</title>
@@ -22,12 +22,12 @@
                 <h3>로그인</h3>
             </div>
             <!-- 아이디 / 비밀번호 입력칸 -->
-            <form class="LoginRegister" action="">
+            <form class="LoginRegister" th:action="@{/login/login}" name="join" method="post" th:object="${memberVO}">
                 <div>
-                    <input id="email" class="input" type="text" name="email" placeholder="아이디(이메일)">
+                    <input id="email" class="input" type="text" name="email" placeholder="아이디(이메일)" th:field="*{Id}">
                 </div>
                 <div>
-                    <input class="input" type="password" name="password" placeholder="비밀번호">
+                    <input class="input" type="password" name="password" placeholder="비밀번호" th:field="*{Pw}">
                 </div>
                 <label class="autoLoginLabel">
                     <input class="autoLogin" type="checkbox" name="auto-login" value="1" >자동로그인
