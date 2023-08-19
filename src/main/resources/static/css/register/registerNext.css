@@ -260,3 +260,21 @@ input:focus{
     border: 1px solid #21BAF3;
 
 }
+
+/*임종민 추가 사항*/
+.fail {
+    margin-bottom: 6px;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: -0.36px;
+    color: red;
+    display: none;
+}
+.succes {
+    margin-bottom: 6px;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: -0.36px;
+    color: blue;
+    display: none;
+}

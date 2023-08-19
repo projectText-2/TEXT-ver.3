@@ -1,19 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>회원가입2</title>
-    <!-- 공통 css -->
-    <link rel="stylesheet" href="../../static/css/font/font.css">
-    <!-- 공통 js -->
+    <title>회원가입</title>
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <link rel='stylesheet' type='text/css' href='/css/inc/reset.css'>
+    <link rel='stylesheet' type='text/css' href='/css/font/font.css'>
+    <link rel="stylesheet" href="/css/inc/layout.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <script src="/js/inc/layout.js"></script>
     <!-- 페이지 css -->
-    <link rel="stylesheet" href="../../static/css/register/registerNext.css">
-    <!-- 페이지 js -->
-    <script src="../../static/js/register/register.js" defer></script>
+    <link rel="stylesheet" href="/css/register/registerNext.css">
+    <script src="/js/register/registerNext.js"></script>
 
 </head>
 <body>
+<header th:insert="~{inc/header.html :: header}"></header>
 <div id="app">
     <div class="appWrapper">
         <div class="PageWrapper">
@@ -21,14 +23,15 @@
                 <div class="Title">
                     <h3>회원가입</h3>
                 </div>
-                <form class="RegisterPageForm" action="">
+                <form class="RegisterPageForm" th:action="@{/register/registerNext}" name="join" method="post" th:object="${memberVO}">
                     <!-- 닉네임 -->
                     <div>
-                        <input id="idOrEmail" class="nickInput" type="text" placeholder="아이디" />
-                        <p class="explain">올바른 이메일 형식이 아닙니다.</p>
+                        <input id="idOrEmail" class="nickInput" type="text" placeholder="아이디" th:field="*{ID}" onfocusout="checkid()" />
+                        <p class="fail">사용할 수 없는 아이디 입니다.</p>
+                        <p class="succes">사용가능한 아이디 입니다.</p>
                     </div>
                     <div>
-                        <input id="pw" class="nickInput" type="password" placeholder="비밀번호" />
+                        <input id="pw" class="nickInput" type="password" placeholder="비밀번호" th:field="*{PW}" />
                         <p class="explain">대/소문자, 숫자, 특수문자 중 2가지 이상의 조합으로 10자 이상</p>
                     </div>
                     <div>
@@ -42,7 +45,7 @@
                     </div>
                     <!-- 닉네임 -->
                     <div>
-                        <input id="nickname" class="nickInput" type="text" placeholder="닉네임" />
+                        <input id="nickname" class="nickInput" type="text" placeholder="닉네임" th:field="*{NAME}" />
                         <p class="explain">이미 사용중인 닉네임입니다.</p>
                     </div>
                     <!-- 폰 번호 입력 -->
@@ -53,6 +56,7 @@
                                     class="PhoneNumInput"
                                     type="tel"
                                     placeholder="휴대폰 번호(- 없이 입력)"
+                                    th:field="*{HP}"
                             />
                         </div>
                         <button class="authentication-SendButton">인증번호 전송</button>
@@ -73,8 +77,8 @@
                         <button class="authentication-Button">인증하기</button>
                     </div>
                     <p class="explain">인증번호가 일치하지 않습니다.</p>
-
-                    <button type="button" class="SubmitButton">가입하기</button>
+                    <input type="text" id="sort" th:field="*{SORT}" hidden>
+                    <button type="button" class="SubmitButton" onclick="regist()" disabled>가입하기</button>
                 </form>
             </div>
         </div>

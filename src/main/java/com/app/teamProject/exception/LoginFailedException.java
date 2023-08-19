@@ -1,6 +1,6 @@
 package com.app.teamProject.exception;
 
-public class LoginFailedException extends RuntimeException{
+public class LoginFailedException extends RuntimeException {
     public LoginFailedException(String message) {
         super((message));
     }
