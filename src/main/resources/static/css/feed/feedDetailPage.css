@@ -116,6 +116,11 @@ a {
     -webkit-text-decoration-skip: objects;
 }
 
+a:after {
+    text-decoration: none;
+    color: white;
+}
+
 a,
 area,
 button,
@@ -131,7 +136,7 @@ textarea,
 a:-webkit-any-link {
     color: -webkit-link;
     cursor: pointer;
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 img {
@@ -236,7 +241,7 @@ h2 {
 
 .autoSet {
     width: auto;
-    height: auto;
+    height: 100%;
     transition: opacity 200ms ease-in-out 0s;
     display: none;
     opacity: 0;
@@ -537,13 +542,12 @@ h2 {
     border: 1px black solid;
 }
 
-.heartOn{
+.heartOn {
     color: white;
     background-color: rgb(122, 41, 250);
 }
 
 .mapWrapper {
-    padding: 40px 0px;
     border-top: 1px solid rgb(238, 238, 238);
     border-bottom: none;
 }
@@ -581,7 +585,7 @@ h2 {
 
 .mapmap2 {
     position: relative;
-    height: 164px;
+    height: 300px;
 }
 
 .showMap {
@@ -660,7 +664,7 @@ h2 {
     -webkit-box-align: center;
     align-items: center;
     margin: 0px auto;
-    max-width: 768px;
+    max-width: 0px;
 }
 
 .insertButton {
@@ -680,14 +684,14 @@ h2 {
     color: rgb(51, 51, 51);
     white-space: nowrap;
     margin-top: -4px;
-    top:-20px
+    top: -20px
 }
 
-.xi-heart-o{
+.xi-heart-o {
     font-size: 40px;
 }
 
-.xi-heart{
+.xi-heart {
     font-size: 40px;
     color: red;
 }
@@ -715,16 +719,18 @@ h2 {
     align-items: center;
 }
 
-.buttonSet3{
-    width:100%;
-    height:56px;
-    color:white;
-    font-size:16px;
+.buttonSet3 {
+    width: 100%;
+    height: 56px;
+    color: white;
+    font-size: 16px;
 }
 
 .clickButton {
     -webkit-box-flex: 0;
+    text-decoration: none;
     flex: 0 0 auto;
+    color: white;
 }
 
 /*여기부터 댓글 css*/
@@ -741,7 +747,7 @@ h2 {
 
 .commentsTitle {
     border-bottom: 1px solid rgb(238, 238, 238);
-    padding: 30px 0px;
+    padding: 15px 0px;
 }
 
 .commentsTitle2 {
@@ -763,6 +769,11 @@ h2 {
     padding: 30px 0px;
     border-bottom: 1px solid rgb(238, 238, 238);
 }
+
+
+/*.paddBorder > * {*/
+/*    font-size: 30px;*/
+/*}*/
 
 .commenterWrapper {
     display: flex;
@@ -798,7 +809,7 @@ h2 {
 
 .commenterName2 {
     font-weight: bold;
-    font-size: 12px;
+    font-size: 18px;
     line-height: 12px;
     margin-bottom: 10px;
 }
@@ -811,8 +822,10 @@ h2 {
 
 .comment {
     margin-bottom: 20px;
-    font-size: 12px;
+    font-size: 18px;
     line-height: 22px;
+
+    display: inline;
 }
 
 .thumbnail {
@@ -853,7 +866,7 @@ h2 {
     margin-bottom: 10px;
     height: 12px;
     line-height: 12px;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: bold;
 }
 
@@ -863,6 +876,10 @@ h2 {
     color: rgb(155, 155, 155);
 }
 
+.fontSize {
+    font-size: 16px;
+}
+
 .bigCommenterWrapper2 {
     width: 100%;
     line-height: 22px;
@@ -870,6 +887,7 @@ h2 {
     padding: 20px;
     background-color: rgb(249, 249, 249);
     font-size: 12px;
+
 }
 
 .Ratio-ratio {
@@ -880,6 +898,7 @@ h2 {
 }
 
 .Ratio-content {
+    height: 100%;
     left: 0px;
     position: absolute;
     top: 0px;
@@ -897,17 +916,26 @@ h2 {
     text-align: left;
 }
 
+.noshow {
+    display: none;
+}
 
 .commentForm {
     display: flex;
     -webkit-box-pack: justify;
     justify-content: space-between;
-    padding: 46px 20px 0px;
+    padding: 23px 20px 0px;
 }
 
 .positionF {
     position: relative;
     width: 90%;
+}
+
+.position7 {
+    position: relative;
+    width: 70%;
+    left: 10%;
 }
 
 .puter {
@@ -924,6 +952,7 @@ h2 {
     letter-spacing: -0.03em;
     text-align: left;
 }
+
 
 .submitBu {
     border: 1px solid rgb(204, 204, 204);
@@ -946,11 +975,36 @@ h2 {
     line-height: 22px;
 }
 
-.submitBu:disabled {
+.submitBu:disabled,
+.submitBu2:disabled {
     border: none;
     background: rgb(238, 238, 238);
     color: rgb(170, 170, 170);
 }
+
+.submitBu2 {
+    border: 1px solid rgb(204, 204, 204);
+    background: rgb(255, 255, 255);
+    color: rgb(51, 51, 51);
+    display: inline-block;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    box-sizing: border-box;
+    font-weight: 500;
+    letter-spacing: -0.03em;
+    text-align: center;
+    white-space: nowrap;
+    width: auto;
+    border-radius: 10px;
+    padding: 13px 18px;
+    font-size: 14px;
+    line-height: 22px;
+
+    /*position: relative;*/
+    /*right: -30px;*/
+    margin-left: 11%;
+}
+
 
 .commentForm > button {
     align-self: flex-end;
@@ -1013,17 +1067,11 @@ h2 {
     background-color: rgba(0, 0, 0, 0.3);
     border-radius: 16px;
 }
-.imgs{
-    transform: translate(-50%, -50%);
-    margin-top: 50%;
-    margin-left: 50%;
+
+.imgs {
     width: 100%;
-    height: auto;
+    height: 100%;
 }
-
-
-/*------------------ 추가된거  --------------------------*/
-
 
 .reportBtn {
     white-space: nowrap;
