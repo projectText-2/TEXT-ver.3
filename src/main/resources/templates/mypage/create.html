@@ -58,7 +58,7 @@
                                             <fieldset class="" id="">
                                                 <div>
                                                     <div class="">
-                                                    <input type="text" class="contentinp" valid="true">
+                                                    <input type="text" class="contentinp">
                                                     </div>
                                                 </div>
                                             </fieldset>
@@ -80,8 +80,8 @@
                                                 <div class="imgbox">
                                                     <div class="imgcard">
                                                         <div class="">
-                                                            <div class="delete" onclick="del(1)">
-                                                                <img src="https://images.freeimages.com/clg/images/16/161664/x-icon_f" width="25" height="25">
+                                                            <div class="delete" id="delete1" onclick="del(1)">
+                                                                <button type="button" class="xi-close"></button>
                                                             </div>
                                                             <label for="img1">
                                                                 <div class="imgthum" id="image_container">
@@ -105,8 +105,8 @@
                                                 <div class="imgbox">
                                                     <div class="imgcard">
                                                         <div class="">
-                                                            <div class="delete" onclick="del(2)">
-                                                                <img src="https://images.freeimages.com/clg/images/16/161664/x-icon_f" width="25" height="25">
+                                                            <div class="delete" id="delete2" onclick="del(2)">
+                                                                <button type="button" class="xi-close"></button>
                                                             </div>
                                                             <label for="img2">
                                                                 <div class="imgdiv" id="image_container1">
@@ -129,8 +129,8 @@
                                                 <div class="imgbox">
                                                     <div class="imgcard">
                                                         <div class="">
-                                                            <div class="delete" onclick="del(3)">
-                                                                <img src="https://images.freeimages.com/clg/images/16/161664/x-icon_f" width="25" height="25">
+                                                            <div class="delete" id="delete3" onclick="del(3)">
+                                                                <button type="button" class="xi-close"></button>
                                                             </div>
                                                             <label for="img3">
                                                                 <div class="imgdiv" id="image_container2">
@@ -150,9 +150,10 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="import">*사진은 최대 9개까지 저장이 가능하며 처음 사진은 썸네일로 사용됩니다.</div>
-                                            </div>                                            
+                                            </div>
                                         </div>
+                                        <div class="imgbutton"><button type="button" onclick="imgplus()">사진 추가하기</button></div>
+                                        <div class="import">*사진은 최대 9개까지 저장이 가능하며 처음 사진은 썸네일로 사용됩니다.</div>
                                     </div>
                                 </div>
                             </div>
@@ -169,4 +170,7 @@
     </div>
 </form>
 </body>
+<script>
+    let count = 3;
+</script>
 </html>
