@@ -203,39 +203,31 @@
                                 </div>
                             </div>
                             <div class="commenterName">
-                                <div class="commenterName2">동그란무좀양말</div>
+                                <div class="commenterName2">원스톤2</div>
                                 <div class="whenComment">
                                     <div class="when">2023년 7월 23일 14:41 작성</div>
                                 </div>
+
                             </div>
                         </div>
+
                         <div class="comment">
-                            정말 멋진 작품이네요~ 탐나네요~
+                            처음 배운 쿠킹클래스인데 이해되기 쉽게 잘 가르쳐주셔서 감사합니다.
                         </div>
-                      <!--  <div class="thumbnail">
-                            &lt;!&ndash; 댓글에 이미지 공간, 이미지 갯수만큼 반복으로 출력하면 될듯 하다&ndash;&gt;
-                            <div>
-                                <img
-                                        class="important"
-                                        width="100"
-                                        src="https://res.cloudinary.com/frientrip/image/upload/ar_1:1,c_fill,dpr_2,f_auto,q_auto,w_600/ios_image_1334875_20230723144142495_d0d1d39b22dac37ac3250614a97e80eb164a6c58969943f791f7103da6f559ce"
-                                />
-                                <div class="autoSet" style="opacity: 1; display: block">
-                                    <div class="Ratio" style="display: block">
-                                        <div class="Ratio-ratio">
-                                            <div class="Ratio-content">
-                                                <img
-                                                        alt="후기 이미지"
-                                                        class="imgSet"
-                                                        width="100"
-                                                        src="..//img/trade/tradeImg/교환물건(6).jpg"
-                                                />
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>-->
+                        <!-- 기타 버튼-->
+                        <div class="controllerWrap">
+                            <div class="controller" onclick="report()"><span>신고</span></div>
+                            <div class="controller" onclick="showInp(this)"><span>대댓글 달기</span></div>
+
+
+                            <!--    대대 입댓글력 값 전송용 form 태그-->
+                            <form class="noshow" value="sdf">
+                                <div class="positionF">
+                                    <input class="puter" value=""></div>
+                                <button type="submit" class="submitBu">전송</button>
+                            </form>
+                        </div>
+
                         <!--    대댓글 공간-->
                         <div class="bigCommenterWrapper">
                             <div class="bigCommenterWrapper2">
@@ -264,17 +256,77 @@
                                         </div>
                                     </div>
                                     <div>
-                                        <div class="CommenterName">티팟테팔</div>
+                                        <div class="CommenterName">제이몬티베이킹</div>
                                         <div class="commenterWhen">2023-07-25 00:03 작성</div>
                                     </div>
                                 </div>
-                                <div>
-                                    ㅎㅎ
+
+                                <div class="fontSize">
+                                    안녕하세요^^ 즐겁게 참여해주시고 멋진 사진올려주셔서 감사합니다 늘 좋은
+                                    수업되도록 하겠습니다 :)
                                 </div>
+
+                                <!-- 기타 버튼-->
+                                <div class="controllerWrap">
+                                    <div class="controller" onclick="report()"><span>신고</span></div>
+                                    <div class="controller" onclick="showInp(this)"><span>대댓글 달기</span></div>
+
+
+                                    <!--    대대댓글 입력 값 전송용 form 태그-->
+                                    <form class="noshow" value="sdf">
+                                        <div class="positionF">
+                                            <input class="puter" value=""></div>
+                                        <button type="submit" class="submitBu">전송</button>
+                                    </form>
+                                </div>
+
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+    <div id="modalWrapper">
+        <!--        모달을 여기에 띄우기-->
+        <div class="opacity">
+            <!--   게시글 신고, 삭제 모달용-->
+            <div class="contentsWrp">
+                <!--닫기 버튼-->
+                <button class="closebtn" name="CloseBtn" type="button" onclick="noShow()">
+                    <img
+                            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E %3Cg fill='none' fill-rule='nonzero'%3E %3Cpath d='M0 0h24v24H0z'/%3E %3Cpath stroke='%23000' stroke-width='2' d='M7.05 7.05l9.9 9.9M16.95 7.05l-9.9 9.9'/%3E %3C/g%3E %3C/svg%3E"
+                            alt="닫기 버튼"
+                            class="closeImg2"
+                    />
+
+                </button>
+                <div class="reportWrap">
+                    <!-- 게시물 주인일 경우에만 삭제 보이게 만들기 -->
+                    <div>
+                        <div class="owner center2" onclick="deletePost()"><span>게시물 삭제</span></div>
+                        <div class="center2">
+                            <span onclick="report()">신고하기</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 신청자 리스트용 모달-->
+            <div class="listWrap">
+                <!--닫기 버튼-->
+                <button name="CloseBtn" type="button" onclick="noShow()">
+                    <img
+                            src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E %3Cg fill='none' fill-rule='nonzero'%3E %3Cpath d='M0 0h24v24H0z'/%3E %3Cpath stroke='%23000' stroke-width='2' d='M7.05 7.05l9.9 9.9M16.95 7.05l-9.9 9.9'/%3E %3C/g%3E %3C/svg%3E"
+                            alt="닫기 버튼"
+                            class="closeImg"
+                    />
+
+                </button>
+
+                <!--<div th:replace="~{fragment/together :: copy}">
+                    &lt;!&ndash;  여기에 모달로 리스트 띄우기&ndash;&gt;
+                </div>-->
             </div>
         </div>
     </div>
