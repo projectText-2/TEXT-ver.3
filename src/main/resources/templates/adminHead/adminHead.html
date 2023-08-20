@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -20,7 +20,7 @@
 
 </head>
 <body class="sidenav-show sidenav-pinned">
-<div class="wrapper">
+<div class="wrapper" th:fragment="header">
     <div class="sidenav nav nav-ver fixed-left nav-expand nav-light bg-white ps">
         <div class="scrollbar-inner" style="padding-bottom: 8rem;">
             <div class="sidenav-header d-flex align-center">
