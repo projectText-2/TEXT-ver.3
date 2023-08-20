@@ -175,7 +175,7 @@ hr{
     max-width: 33.33333%;
 }
 .imgcard {
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     box-shadow: none;
     border: 0;
     transition: all .15s ease;
@@ -250,8 +250,7 @@ label { display:inline-block; width:260px; }
     position: absolute;
     top: 1%;
     right: 5.9%;
-    width: 25px;
-    height: 25px;
+    width: 33px;
     display: none;
 }
 
@@ -326,4 +325,16 @@ label { display:inline-block; width:260px; }
     -webkit-appearance: button;
     overflow: visible;
 	width: 88px;
+}
+.imgbutton{
+    width: 100%;
+    margin-bottom: 10px;
+    border: 1px solid;
+    padding: 10px 0;
+}
+.imgbutton button{
+    width: 100%;
+}
+.xi-close{
+    font-size: 25px;
 }
