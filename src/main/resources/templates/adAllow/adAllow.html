@@ -3,21 +3,26 @@
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <!-- 공통 css-->
+
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <!-- 공통 css-->
     <link rel="stylesheet" href="/css/font/font.css">
     <link rel="stylesheet" href="/css/inc/reset.css">
     <link rel="stylesheet" href="/css/inc/layout.css">
-    <!-- 페이지 css-->
-    <link rel="stylesheet" href="/css/jinDefault/list.css">
-    <!-- 공통 js-->
+    <!-- 공통js -->
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
-
+    <script src="/js/inc/layout.js"></script>
+    <!-- 페이지 css -->
+    <link rel="stylesheet" href="/css/jinDefault/list.css">
+    <link rel="stylesheet" href="/css/adminHead/adminHead.css">
+    <!-- 페이지 js -->
+    <script src="/js/admindHead/adminHead.js"></script>
     <title>광고관리 페이지~~</title>
 </head>
 <body>
 
 <div>
+<div th:replace="~{adminHead/adminHead.html :: header}"></div>
     <div class="info-title-box info-title-box-flex">
         <div class="logo-box-layout">
             <div class="logo-box">
@@ -66,7 +71,6 @@
                                     <!-- 신청자 이름 -->
                                     <td class="member_type is_active">
                                         ljs1234
-                                        <hr/>
                                     </td>
                                     <!-- 형 식 -->
                                     <td>배너</td>
@@ -82,7 +86,6 @@
                                     <!-- 신청자 이름 -->
                                     <td class="member_type is_active">
                                         ljs1234
-                                        <hr/>
                                     </td>
                                     <!-- 형 식 -->
                                     <td>피드</td>
