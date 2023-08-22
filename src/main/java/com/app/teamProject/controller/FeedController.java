@@ -10,6 +10,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("feed/*")
 public class FeedController {
 
+
+    @GetMapping("create")
+    public void create(){;}
+
     @GetMapping("feedList")
     public void feedList(){;}
 }
