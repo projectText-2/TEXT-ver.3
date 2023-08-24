@@ -5,4 +5,9 @@
 <select id="selectAll" resultType="memberVO">
     SELECT ID, NAME, HP, SORT FROM TBL_MEMBER
 </select>
+
+<select id="selectDetail" resultType="memberVO">
+    SELECT ID, NAME, HP, IMG FROM TBL_MEMBER WHERE ID = #{Id}
+</select>
+
 </mapper>

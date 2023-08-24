@@ -15,5 +15,6 @@ public class AdminMapperTests {
     public void selectAllTest(){
         adminMapper.selectAll().stream().map(MemberVO::toString).forEach(log::info);
     }
-
+    @Test
+    public void selectDetailTest(){ adminMapper.selectDetail("id1").stream().map(MemberVO::toString).forEach(log::info);}
 }
