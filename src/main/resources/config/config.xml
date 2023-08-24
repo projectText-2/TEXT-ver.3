@@ -2,6 +2,7 @@
 <!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0/EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
     <typeAliases>
+        <typeAlias type="com.app.teamProject.domain.MemberVO" alias="memberVO"/>
         <typeAlias type="com.app.teamProject.domain.feed.FeedReportVO" alias="feedReportVO"/>
         <typeAlias type="com.app.teamProject.domain.feed.FeedReplyReportVO" alias="feedReplyReportVO"/>
         <typeAlias type="com.app.teamProject.domain.together.TogetherReportVO" alias="togetherReportVO"/>

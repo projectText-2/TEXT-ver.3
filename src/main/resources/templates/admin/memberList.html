@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -25,7 +25,7 @@
     <div class="info-title-box info-title-box-flex">
         <div class="logo-box-layout">
             <div class="logo-box">
-                <img src="/image/logo/logo.png"/>
+                <img src="/image/inc/logo.svg"/>
             </div>
             <!-- <div class="logo-title">
                       <span>Jar</span>
@@ -150,14 +150,12 @@
                         <div class="info-table">
                             <table>
                                 <thead>
-                                <tr>
-                                    <th>No</th>
-                                    <th>회원상태</th>
-                                    <th>이메일</th>
-                                    <th>이름</th>
-                                    <th>닉네임</th>
-                                    <th>핸드폰 번호</th>
-                                    <th>다른 필요한 내용</th>
+                                <tr th:each="item, index : ${items}">
+                                    <th:text ="${index + 1}">No</th:text>
+                                    <th:text ="${item.sort}">회원상태</th:text>
+                                    <th:text ="${item.name}">이름</th:text>
+                                    <th:text ="${item.id}">아이디</th>
+                                    <th:text ="${item.ph}">핸드폰 번호</th>
                                 </tr>
                                 </thead>
                                 <!-- 리스트 내용 -->
@@ -168,12 +166,6 @@
                                     <td class="member_type is_active">
                                         일반 회원
                                         <hr class="nomal"/>
-                                    </td>
-                                    <td>
-                                        <!-- 회원 이메일 -->
-                                        <a>
-                                            ljs1234@gmail.com
-                                        </a>
                                     </td>
                                     <!-- 회원 이름 -->
                                     <td>황진서</td>
@@ -192,12 +184,6 @@
                                     <td class="member_type is_active">
                                         공식 회원
                                         <hr class="comp"/>
-                                    </td>
-                                    <td>
-                                        <!-- 회원 이메일 -->
-                                        <a>
-                                            ljs1234@gmail.com
-                                        </a>
                                     </td>
                                     <!-- 회원 이름 -->
                                     <td>황진서</td>
