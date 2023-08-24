@@ -11,6 +11,5 @@ public class TradeReportVO {
 
     private Long id;
     private String memberId;
-    private String reportId;
-    private Long postId;
+    private Long tradeId;
 }

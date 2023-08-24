@@ -1,4 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0/EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
+    <typeAliases>
+        <typeAlias type="com.app.teamProject.domain.feed.FeedReportVO" alias="feedReportVO"/>
+        <typeAlias type="com.app.teamProject.domain.feed.FeedReplyReportVO" alias="feedReplyReportVO"/>
+        <typeAlias type="com.app.teamProject.domain.together.TogetherReportVO" alias="togetherReportVO"/>
+        <typeAlias type="com.app.teamProject.domain.together.TogetherReplyReportVO" alias="togetherReplyReportVO"/>
+        <typeAlias type="com.app.teamProject.domain.trade.TradeReportVO" alias="tradeReportVO"/>
+        <typeAlias type="com.app.teamProject.domain.trade.TradeReplyReportVO" alias="tradeReplyReportVO"/>
+        <typeAlias type="com.app.teamProject.domain.ReplyNoticeVO" alias="replyNoticeVO"/>
+    </typeAliases>
 </configuration>

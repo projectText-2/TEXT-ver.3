@@ -11,7 +11,6 @@ public class TogetherReportVO {
 
     private Long id;
     private String memberId;
-    private String reportId;
-    private Long postId;
+    private Long togetherId;
 
 }

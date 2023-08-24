@@ -7,9 +7,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @RequiredArgsConstructor
-@RequestMapping("adminreport/*")
+@RequestMapping("adminReport/*")
 public class AdminreportController {
 
     @GetMapping("reportPost")
     public void reportPost(){;}
+
+
 }

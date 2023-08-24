@@ -11,8 +11,7 @@ public class FeedReportVO {
 
     private Long id;
     private String memberId;
-    private String reportId;
-    private Long postId;
+    private Long feedId;
 
 
 }
