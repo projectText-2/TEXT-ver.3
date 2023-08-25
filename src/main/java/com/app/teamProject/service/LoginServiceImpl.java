@@ -12,7 +12,7 @@ public class LoginServiceImpl implements LoginService {
     private final LoginDAO loginDAO;
 
     @Override
-    public Optional<String> login(MemberVO memberVO) {
+    public Optional<MemberVO> login(MemberVO memberVO) {
         return Optional.ofNullable(loginDAO.findIDByID(memberVO));
     }
 }

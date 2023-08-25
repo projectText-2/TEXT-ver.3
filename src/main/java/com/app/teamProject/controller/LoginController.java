@@ -35,7 +35,10 @@ public class LoginController {
 
     @PostMapping("login")
     public RedirectView loginOk(MemberVO memberVO, HttpSession session){
-        session.setAttribute("memberId", loginService.login(memberVO).orElseThrow(() -> {throw new LoginFailedException("아이디 또는 비밀번호 오류");}));
+//        session.setAttribute("memberId", loginService.login(memberVO).orElseThrow(() -> {throw new LoginFailedException("아이디 또는 비밀번호 오류");}));
+        memberVO = loginService.login(memberVO).orElseThrow(() -> {throw new LoginFailedException("아이디 또는 비밀번호 오류");});
+        session.setAttribute("memberId", memberVO.getId());
+        session.setAttribute("memberName", memberVO.getName());
         return new RedirectView("/index/index");
     }
 

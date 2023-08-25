@@ -5,5 +5,5 @@ import com.app.teamProject.domain.MemberVO;
 import java.util.Optional;
 
 public interface LoginService {
-    public Optional<String> login(MemberVO memberVO);
+    public Optional<MemberVO> login(MemberVO memberVO);
 }
