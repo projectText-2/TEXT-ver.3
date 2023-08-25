@@ -10,4 +10,5 @@
     SELECT ID, NAME, HP, IMG FROM TBL_MEMBER WHERE ID = #{Id}
 </select>
 
+<select id="selectReportedList"    ></select>
 </mapper>

@@ -10,8 +10,10 @@ import org.springframework.stereotype.Component;
 public class FeedReportVO {
 
     private Long id;
-    private String memberId;
-    private Long feedId;
+    private String memberId; // 게시글 신고자의 아이디
+    private Long feedId; // 게시글 ID(Long)
+
+
 
 
 }
