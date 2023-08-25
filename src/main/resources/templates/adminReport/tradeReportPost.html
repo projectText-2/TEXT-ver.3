@@ -22,7 +22,7 @@
 </head>
 <body>
 <div>
-<div th:replace="~{adminHead/adminHead.html :: header}"></div>
+    <div th:replace="~{adminHead/adminHead.html :: header}"></div>
     <div class="info-title-box info-title-box-flex">
         <div class="logo-box-layout">
             <div class="logo-box">
@@ -111,13 +111,13 @@
                         <!--<th:block
                                 th:each="num : ${#numbers.sequence(pageDTO.startPage, pageDTO.endPage + 1)}"
                         >-->
-                            <a
-                                    <!--th:class="${(num == pageDTO.startPage) ? 'page-button-active page-button changePage' : 'page-button changePage'}"
-                                    th:href="${num}"-->
-                            >
-                                <span class="page-button"></span>
-                            </a>
-                            <div style="width: 2px"></div>
+                        <a
+                        <!--th:class="${(num == pageDTO.startPage) ? 'page-button-active page-button changePage' : 'page-button changePage'}"
+                        th:href="${num}"-->
+                        >
+                        <span class="page-button"></span>
+                        </a>
+                        <div style="width: 2px"></div>
                         <!--</th:block>-->
                         <div class="">
                             <div class="page-button-margin">
