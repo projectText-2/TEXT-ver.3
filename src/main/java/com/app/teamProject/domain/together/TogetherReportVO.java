@@ -10,7 +10,11 @@ import org.springframework.stereotype.Component;
 public class TogetherReportVO {
 
     private Long id;
-    private String memberId;
-    private Long togetherId;
+    private String memberId; // 게시글 신고자의 아이디
+    private Long togetherId; // 게시글 ID(Long)
+
+
+
+
 
 }

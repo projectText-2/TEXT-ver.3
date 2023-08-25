@@ -1,7 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.app.teamProject.mapper.AdminMapper">
-<select id="">
 
+<select id="selectAll" resultType="memberVO">
+    SELECT ID, NAME, HP, SORT FROM TBL_MEMBER
+</select>
+
+<select id="selectDetail" resultType="memberVO">
+    SELECT ID, NAME, HP, IMG FROM TBL_MEMBER WHERE ID = #{Id}
+</select>
+
+<select id="feedReportList"    >
+ SELECT
+    ROWNUM AS "NO",
+    MEMBER_ID AS "Reported",
+    #{세션에서 받아온 값} AS "Reporter",
+    REPORT_TYPE AS "Category"
+FROM TBL_FEED_REPORT fr
+WHERE fr.REPORT_TYPE = '게시글'
+UNION ALL
+SELECT
+    ROWNUM AS "NO",
+    #{세션에서 받은 reported값} AS "Reported",
+    MEMBER_ID AS "Reporter",
+    REPORT_TYPE AS "Category"
+FROM TBL_FEED_REPLY_REPORT frr
+WHERE frr.REPORT_TYPE = '댓글';
 </select>
 </mapper>
