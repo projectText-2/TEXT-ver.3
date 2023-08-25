@@ -5,5 +5,5 @@ import org.apache.ibatis.annotations.Mapper;
 
 @Mapper
 public interface LoginMapper {
-    public String select(MemberVO memberVO);
+    public MemberVO select(MemberVO memberVO);
 }

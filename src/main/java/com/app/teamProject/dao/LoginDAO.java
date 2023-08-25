@@ -10,7 +10,7 @@ import org.springframework.stereotype.Repository;
 public class LoginDAO {
     private final LoginMapper loginMapper;
 
-    public String findIDByID(MemberVO memberVO){
+    public MemberVO findIDByID(MemberVO memberVO){
         return loginMapper.select(memberVO);
     }
 }
