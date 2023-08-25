@@ -10,5 +10,21 @@
     SELECT ID, NAME, HP, IMG FROM TBL_MEMBER WHERE ID = #{Id}
 </select>
 
-<select id="selectReportedList"    ></select>
+<select id="feedReportList"    >
+ SELECT
+    ROWNUM AS "NO",
+    MEMBER_ID AS "Reported",
+    #{세션에서 받아온 값} AS "Reporter",
+    REPORT_TYPE AS "Category"
+FROM TBL_FEED_REPORT fr
+WHERE fr.REPORT_TYPE = '게시글'
+UNION ALL
+SELECT
+    ROWNUM AS "NO",
+    #{세션에서 받은 reported값} AS "Reported",
+    MEMBER_ID AS "Reporter",
+    REPORT_TYPE AS "Category"
+FROM TBL_FEED_REPLY_REPORT frr
+WHERE frr.REPORT_TYPE = '댓글';
+</select>
 </mapper>
